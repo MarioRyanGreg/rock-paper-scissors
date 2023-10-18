@@ -8,11 +8,9 @@ public class GameSummaryTest {
 
 	@Test
 	public void testGetClientGesture() {
-		//GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
-		//GameSummary gameSummary = new GameSummary("scissors", "scissors", "win");
-		//Assert.assertTrue(gameSummary.getClientGesture().equals("rock"));
-		//Assert.assertNotEquals(gameSummary.getClientGesture(), "scissors");
-		fail("This test always fails");
+		GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
+		Assert.assertTrue(gameSummary.getClientGesture().equals("rock"));
+		Assert.assertNotEquals(gameSummary.getClientGesture(), "scissors");
 	}
 
 	@Test
