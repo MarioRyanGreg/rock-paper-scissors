@@ -13,7 +13,6 @@ public class GameSummaryTest {
 		//Assert.assertTrue(gameSummary.getClientGesture().equals("rock"));
 		//Assert.assertNotEquals(gameSummary.getClientGesture(), "scissors");
 		fail("This test always fails");
-		
 	}
 
 	@Test
