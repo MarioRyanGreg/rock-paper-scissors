@@ -10,7 +10,7 @@ public class GameSummaryTest {
 	public void testGetClientGesture() {
 		GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
 		Assert.assertTrue(gameSummary.getClientGesture().equals("rock"));
-		Assert.assertNotEquals(gameSummary.getClientGesture(), "rock");
+		Assert.assertNotEquals(gameSummary.getServerGesture(), "rock");
 	}
 
 	@Test
