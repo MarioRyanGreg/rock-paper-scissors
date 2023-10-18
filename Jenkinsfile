@@ -20,9 +20,13 @@ node {
 
    }
 
-   stage('Compile'){
+   //stage('Compile'){
   
        // build job: 'Compile-RPS'
+   //}
+   stage('Build') {
+       git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
+       bat "mvn -Dmaven.test.failure.ignore=true clean package"
    }
    
    stage('Acceptance') {
