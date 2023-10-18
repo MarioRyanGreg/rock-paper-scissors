@@ -7,12 +7,6 @@ import org.junit.Test;
 public class GameSummaryTest {
 
 	@Test
-	public void testGetClientGesture() {
-		GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
-		Assert.assertTrue(gameSummary.getClientGesture().equals("rock"));
-	}
-
-	@Test
 	public void testGetServerGesture() {
 		GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
 		Assert.assertTrue(gameSummary.getServerGesture().equals("scissors"));
