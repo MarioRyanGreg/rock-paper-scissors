@@ -24,6 +24,10 @@ node {
   
        // build job: 'Compile-RPS'
    //}
+   stage ('Unit Test') {
+	bat .\mvnw test
+   }
+	
    stage('Build') {
        git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
        bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -48,6 +52,4 @@ node {
    stage('Static Code Analysis'){
        build job: 'static-code-analysis'
    }
-	
-
 }
