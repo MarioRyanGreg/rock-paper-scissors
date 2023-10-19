@@ -11,6 +11,8 @@ public class GameSummaryTest {
 		GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
 		Assert.assertTrue(gameSummary.getClientGesture().equals("rock"));
 		Assert.assertNotEquals(gameSummary.getClientGesture(), "scissors");
+
+		//fail("Unit Test is failed");
 	}
 
 	@Test
