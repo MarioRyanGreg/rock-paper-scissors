@@ -19,11 +19,7 @@ node {
 	  //build job: 'Generate-JavaDoc', parameters: [booleanParam(name: 'generate_javadoc', value: false), stringParam(name: 'javadoc_location', value: 'C:\\_javadoc00')]
 
    }
-
-   //stage('Compile'){
-  
-       // build job: 'Compile-RPS'
-   //}
+	
    stage ('Unit Test') {
 	bat "mvn clean test"
    }
