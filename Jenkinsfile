@@ -25,7 +25,7 @@ node {
        // build job: 'Compile-RPS'
    //}
    stage ('Unit Test') {
-	//bat "mvn test"
+	bat "mvn clean test"
    }
 	
    stage('Build') {
