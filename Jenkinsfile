@@ -21,7 +21,7 @@ node {
    }
 	
    stage ('Unit Test') {
-	//bat "mvn clean test"
+	bat "mvn clean test"
    }
 	
    stage('Build') {
