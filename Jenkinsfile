@@ -1,12 +1,6 @@
 node {
    
    //Declare a global variable for mvnHome
-    agent any
-
-    tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "M3"
-    }
 
    stage('Version') { 
 
@@ -26,12 +20,13 @@ node {
 
    }
 	
-   //stage ('Unit Test') {
-	//bat "mvn clean test"
-   //}
+   stage ('Unit Test') {
+	git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
+	bat "mvn clean test"
+   }
 	
    stage('Build') {
-       git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
+       //git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
        bat "mvn -Dmaven.test.failure.ignore=true clean package"
    }
    
