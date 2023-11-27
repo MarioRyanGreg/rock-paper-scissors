@@ -14,20 +14,26 @@ node {
        
    }
 
-   stage('Document') {
+   //stage('Document') {
    
 	  //build job: 'Generate-JavaDoc', parameters: [booleanParam(name: 'generate_javadoc', value: false), stringParam(name: 'javadoc_location', value: 'C:\\_javadoc00')]
 
-   }
+   //}
 	
-   stage ('Unit Test') {
-	git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
-	bat "mvn clean test"
-   }
+   //stage ('Unit Test') {
+	//git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
+	//bat "mvn clean test"
+   //}
 	
-   stage('Build') {
+   stage('Build && Test') {
        //git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
        bat "mvn -Dmaven.test.failure.ignore=true clean package"
+   }
+
+   stage('Document') {
+   
+	  //build job: 'Generate-JavaDoc', parameters: [booleanParam(name: 'generate_javadoc', value: false), stringParam(name: 'javadoc_location', value: 'C:\\_javadoc00')]
+	mvn javadoc:javadoc
    }
    
    stage('Acceptance') {
