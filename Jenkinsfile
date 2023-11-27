@@ -27,7 +27,7 @@ node {
 	
    stage('Build & Unit Test') {
        //git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
-       bat "mvn -Dmaven.test.failure.ignore=true clean package"
+       bat "mvn -Dmaven.test.failure.ignore=false clean package"
    }
 
    stage('Document') {
