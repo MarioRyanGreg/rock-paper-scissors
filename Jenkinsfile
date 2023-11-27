@@ -5,6 +5,7 @@ node {
    stage('Version') { 
 
 	  //build job: 'Version Check'
+	   bat "mvn --version"
           
    }
 
