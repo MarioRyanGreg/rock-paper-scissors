@@ -25,7 +25,7 @@ node {
 	//bat "mvn clean test"
    //}
 	
-   stage('Build && Test') {
+   stage('Build & Unit Test') {
        //git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
        bat "mvn -Dmaven.test.failure.ignore=true clean package"
    }
@@ -33,7 +33,7 @@ node {
    stage('Document') {
    
 	  //build job: 'Generate-JavaDoc', parameters: [booleanParam(name: 'generate_javadoc', value: false), stringParam(name: 'javadoc_location', value: 'C:\\_javadoc00')]
-	mvn javadoc:javadoc
+	bat "mvn clean javadoc:javadoc"
    }
    
    stage('Acceptance') {
