@@ -1,6 +1,9 @@
 node {
    
    //Declare a global variable for mvnHome
+   tools {
+	maven "M3"
+   }
 
    stage('Version') { 
 
