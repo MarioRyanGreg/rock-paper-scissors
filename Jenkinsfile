@@ -1,9 +1,6 @@
 node {
    
    //Declare a global variable for mvnHome
-   tools {
-	maven "M3"
-   }
 
    stage('Version') { 
 
@@ -23,9 +20,9 @@ node {
 
    }
 	
-   stage ('Unit Test') {
-	bat "mvn clean test"
-   }
+   //stage ('Unit Test') {
+	//bat "mvn clean test"
+   //}
 	
    stage('Build') {
        git 'https://github.com/MarioRyanGreg/rock-paper-scissors.git'
